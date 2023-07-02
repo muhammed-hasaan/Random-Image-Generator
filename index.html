@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+            font-family: sans-serif;
+        }
+
+        @media (max-width: 519px) {
+            #inp2 {
+                width: 100px;
+            }
+
+            #inp3 {
+                width: 100px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+
+        <div class="nav"
+            style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; text-align: center; height: 90px;">
+            <h1><b style="color: red;">R</b>andom <b style="color: red;">I</b>mage <b style="color: red;">G</b>enerator
+            </h1>
+        </div>
+
+
+        <div class="xn"
+            style=" background-color:yellow; padding: 20px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+
+            <input placeholder="Which kind of image you want input name?" type="text"
+                style="text-align: center; width: 749px; border: none; height: 50px; border-radius:50px; font-size: 20px; "
+                id="inp1">
+            <br><br>
+            <br><br>
+            <div class="inputresponce" style="display: flex; justify-content: center; align-items: center; width: 55%;">
+                <input id="inp2" placeholder="input your image width?" type="text"
+                    style=" text-align: center; width: 900px;  height: 50px; border-radius:50px; font-size: 20px; border: none;">
+                <h1>X</h1>
+                <input id="inp3" placeholder="input your image height?" type="text"
+                    style="border: none; text-align: center; width: 900px;  height: 50px; border-radius:50px; font-size: 20px; ">
+            </div>
+        </div>
+        <button id="btn1"
+            style="width: 150px; border: none; height: 56px;  background-color: yellow;  border-radius:50px;font-size: 25px; ">🍳</button>
+    </center>
+    <br><br><br>
+    <center>
+
+        <div style="   border: 1px solid black;  display: flex;  justify-content: center; background-color: red; padding:30px; flex-wrap: wrap; column-gap: 50px; border: 18px solid yellow;  align-items: center; "
+            class="conatiner">
+
+            <div class="container">
+
+                <img src="https://th.bing.com/th?id=OIP.ZZsn6lD6PCjocBzx1tuu1QHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+                    id="img1" alt="">
+            </div>
+
+        </div>
+    </center>
+    <script>
+        var button = document.getElementById("btn1");
+        var image1 = document.getElementById("img1");
+        var image2 = document.getElementById("img2");
+        button.addEventListener("click", () => {
+            var input = document.getElementById("inp1");
+            var input2 = document.getElementById("inp2");
+            var input3 = document.getElementById("inp3");
+            image1.src = `https://source.unsplash.com/${input2.value}x${input3.value}/?${input.value}`
+        })
+
+
+    </script>
+</body>
+
+</html>
